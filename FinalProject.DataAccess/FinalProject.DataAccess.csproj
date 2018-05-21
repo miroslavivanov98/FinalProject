@@ -47,12 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="FinalProjectDbContext.cs" />
+    <Compile Include="Migrations\201805211630066_initial.cs" />
+    <Compile Include="Migrations\201805211630066_initial.Designer.cs">
+      <DependentUpon>201805211630066_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MyConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinalProject.DB\FinalProject.DB.csproj">
+      <Project>{547e7560-ec02-4504-95ae-3d690daf5825}</Project>
+      <Name>FinalProject.DB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805211630066_initial.resx">
+      <DependentUpon>201805211630066_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

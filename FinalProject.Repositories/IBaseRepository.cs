@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.DataAccess.Repositories
+namespace FinalProject.Repositories
 {
     public interface IBaseRepository<T> where T : class
     {

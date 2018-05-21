@@ -47,7 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Manafacturer.cs" />
+    <Compile Include="Entities\Shop.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Weapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using FinalProject.DB.Entities;
 
-namespace FinalProject.DataAccess.Repositories
+namespace FinalProject.Repositories
 {
-    public class UserRepository : BaseRepository<User>
+   public class ManafacturerRepository : BaseRepository<Manafacturer>
     {
     }
 }

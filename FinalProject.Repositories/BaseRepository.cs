@@ -1,4 +1,6 @@
-﻿using FinalProject.DB.Entities;
+﻿using FinalProject.DataAccess;
+using FinalProject.Repositories;
+using FinalProject.DB.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.DataAccess.Repositories
+namespace FinalProject.Repositories
 {
     public abstract class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {

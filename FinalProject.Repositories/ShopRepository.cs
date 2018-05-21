@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FinalProject.DB.Entities;
 
-namespace FinalProject.DataAccess.Repositories
+namespace FinalProject.Repositories
 {
    public class ShopRepository : BaseRepository<Shop>
     {

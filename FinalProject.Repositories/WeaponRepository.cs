@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.DataAccess.Repositories
+namespace FinalProject.Repositories
 {
     public class WeaponRepository : BaseRepository<Weapon>
     {
