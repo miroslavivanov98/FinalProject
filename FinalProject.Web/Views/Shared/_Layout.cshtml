@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +15,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Guns", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Session["ID"] == null)
+                    {
+                        <li><a href="@Url.Action("LogIn", "Authentication")"><span class="glyphicon glyphicon-log-in"></span> Log in</a></li>
+                        <li><a href="@Url.Action("Registration", "Authentication")"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="@Url.Action("AccountDetails", "Authentication", new { id = Session["ID"] })"><span class="glyphicon glyphicon-user"></span>@Session["Username"]</a></li>
+                        <li><a href="@Url.Action("LogOut", "Authentication")"><span class="glyphicon glyphicon-log-out"></span>Log out</a></li>
+                    }
                 </ul>
             </div>
         </div>
