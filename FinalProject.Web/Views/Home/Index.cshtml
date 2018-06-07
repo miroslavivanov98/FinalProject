@@ -1,24 +1,22 @@
-﻿@{
+﻿@using FinalProject.DB.Entities
+@{
+
     ViewBag.Title = "Home Page";
 }
 
-@for (int i = 0; i < 4; i++)
-{
-    <div class="row">
-        @for (int l = 0; l < 3; l++)
-        {
-            <div class="col-md-3 product-container">
-                <img src="~/Content/images/gun.jpg" width=148px />
-                <h4>Manafacturer - Weapon</h4>
-                <div class="ratings">
-                    <div class="empty-stars"></div>
-                    <span class="price"><br />1000лв</span> <br />
-                    <span class="product-buttons">
-                        <button class="btn btn-primary">Разгледай</button><br />
-                        <button class="btn btn-danger">Купи</button>
-                    </span>
-                </div>
-            </div>
-        }
-    </div>
-}
+
+<div class="row">
+    @foreach (Weapon w in Model.Weapon)
+    {
+        <div class="col-md-3 product-container">
+            <img src="~/Content/images/gun.jpg" width=148px />
+            <h4>@w.Manafacturer.Name "@w.Model"</h4>
+                <span class="price"><br />@w.Price-лв</span> <br />
+                <span class="product-buttons">
+                    <a href="Weapon/View/@w.Id" class="btn btn-primary">Разгледай</a>
+                    <button class="btn btn-danger">Купи</button>
+                </span>
+            </div>     
+    }
+</div>
+

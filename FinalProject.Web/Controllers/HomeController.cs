@@ -1,5 +1,6 @@
 ﻿using FinalProject.DB.Entities;
 using FinalProject.Repositories;
+using FinalProject.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,15 @@ namespace FinalProject.Web.Controllers
     {
         public ActionResult Index()
         {
-            WeaponRepository weapons = new WeaponRepository();
-            Weapon neshtosi = new Weapon() { Id = 0, ManafacturerId = 2, Weight = "2,50kg", Name = "Nehsto", Price = "1999лв" };
-            weapons.Save(neshtosi);
-            return View();
+            //WeaponRepository weapons = new WeaponRepository();
+            //Weapon AtaArms = new Weapon() { Id = 0, ManafacturerId = 3, Name = "Ms1020", Caliber = "12", Weight = "2.1kg", BarrelLength = "90См", Price = "1245лв" };
+            //weapons.Save(AtaArms);
+            //return View();
+            WeaponRepository repo = new WeaponRepository();
+
+            WeaponListViewModel model = new WeaponListViewModel() { Weapon = repo.GetAll() };
+            return View(model);
+           
         }
 
         public ActionResult About()

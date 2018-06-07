@@ -17,7 +17,7 @@ namespace FinalProject.DB.Entities
 
         [Required, StringLength(50)]
         [Index("IX_WeaponsNameUnique", IsUnique = true)]
-        public string Name { get; set; }
+        public string Model { get; set; }
 
         [Required, StringLength(20)]
         public string Caliber { get; set; }
@@ -27,7 +27,6 @@ namespace FinalProject.DB.Entities
 
         [Required, StringLength(20)]
         public string BarrelLength { get; set; }
-
 
         [StringLength(20)]
         public string Price { get; set; }

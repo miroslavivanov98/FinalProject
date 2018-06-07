@@ -53,6 +53,7 @@
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="ManafacturerRepository.cs" />
     <Compile Include="ShopRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
     <Compile Include="UserRepository.cs" />
     <Compile Include="WeaponRepository.cs" />
   </ItemGroup>

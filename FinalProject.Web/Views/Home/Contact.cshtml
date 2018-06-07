@@ -2,16 +2,11 @@
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<span class="contact">
+    <p>Контакти: Мирослав Иванов</p>
+    <p>abv:mirkata36@abv.bg</p>
+    <p>GSM:0886650305</p>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+</span>
+<input type="button" value="Назад" class="btn btn-group" onclick="location.href='@Request.UrlReferrer'" />

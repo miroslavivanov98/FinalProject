@@ -42,12 +42,12 @@ namespace FinalProject.DataAccess.Migrations
             if (!context.Weapons.Any())
             {
                 context.Weapons.AddOrUpdate(x => x.Id,
-                    new Weapon() { ManafacturerId = 1, Name = "Cy", Caliber = "12", Weight = "2.0kg", BarrelLength = "30sm", Price = "1312" },
-                    new Weapon() { ManafacturerId = 2, Name = "R8 Luxus", Caliber = "12", Weight = "1.5kg", BarrelLength = "30sm", Price = "1253" },
-                    new Weapon() { ManafacturerId = 3, Name = "Argo", Caliber = "12", Weight = "2.5kg", BarrelLength = "30sm", Price = "6543" },
-                    new Weapon() { ManafacturerId = 4, Name = "7001", Caliber = "12", Weight = "2.3kg", BarrelLength = "30sm", Price = "1255" },
-                     new Weapon() { ManafacturerId = 3, Name = "7002", Caliber = "12", Weight = "2.3kg", BarrelLength = "36sm", Price = "1258" },
-                     new Weapon() { ManafacturerId = 5, Name = "M12 Extremer", Caliber = "30", Weight = "3.1kg", BarrelLength = "30sm", Price = "1245" }
+                    new Weapon() {Id = 1, ManafacturerId = 1, Model = "Cy", Caliber = "12", Weight = "2.0", BarrelLength = "30", Price = "1312" },
+                    new Weapon() { Id = 2, ManafacturerId = 2, Model = "R8 Luxus", Caliber = "12", Weight = "1.5", BarrelLength = "30", Price = "1253" },
+                    new Weapon() { Id = 3, ManafacturerId = 3, Model = "Argo", Caliber = "12", Weight = "2.5", BarrelLength = "30", Price = "6543" },
+                    new Weapon() { Id = 4, ManafacturerId = 4, Model = "7001", Caliber = "12", Weight = "2.3", BarrelLength = "30", Price = "1255" },
+                     new Weapon() { Id = 5, ManafacturerId = 3, Model = "7002", Caliber = "12", Weight = "2.3", BarrelLength = "36", Price = "1258" },
+                     new Weapon() { Id = 6, ManafacturerId = 5, Model = "M12 Extremer", Caliber = "30", Weight = "3.1", BarrelLength = "30", Price = "1245" }
                      );
 
             }

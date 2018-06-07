@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Weapon";
+    var w = Model.Weapon;
+}
+<h2>@w.Manafacturer.Name @w.Model</h2>
+<div class="col-md-12">
+    <table class="table">
+        @foreach (var spec in Model.Specs)
+        {
+            <tr>
+                <td style="font-weight: bold;">@spec.Name</td>
+                <td>@spec.Value</td>
+            </tr>
+        }
+    </table>
+    
+    <input type="button" value="Назад" class="btn btn-group" onclick="location.href='@Request.UrlReferrer'" />
+    <button class="btn btn-danger">Купи</button>
+</div>
