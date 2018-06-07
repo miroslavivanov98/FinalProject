@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "OrderForm";
+}
+
+<h2>OrderForm</h2>
+
+
+<form>
+    <div class="form-control form-group">
+        <label for="exampleImputEmail1">Email Address</label> >
+        <input type="email" class=" form-control" id="exampleImputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+    </div>
+    <div class="form-control form-group">
+        <label for="exampleImputFirstName1">First Name</label> >
+        <input type="text" class=" form-control" id="exampleImputFirstName1" aria-describedby="nameHelp" placeholder="Enter First Name">
+    </div>
+    <div class="form-control form-group">
+        <label for="exampleImputLastName1">Last Name</label> >
+        <input type="text" class=" form-control" id="exampleImputLastName1" aria-describedby="nameHelp" placeholder="Enter Last Name">
+    </div>
+    <div class="form-control form-group">
+        <label for="exampleImputAddress1"> Address</label> >
+        <input type="text" class=" form-control" id="exampleImputAddress1" aria-describedby="addressHelp" placeholder="Enter Address">
+    </div>
+    <div class="form-control form-group">
+        <label for="exampleImputPhone1"> Phone</label> >
+        <input type="number" class=" form-control" id="exampleImputPhone1" aria-describedby="phoneHelp" placeholder="Enter Address">
+    </div>
+    <input type="button" value="Назад" class="btn btn-group" onclick="location.href='@Request.UrlReferrer'" />
+    <a></a>
+</form>

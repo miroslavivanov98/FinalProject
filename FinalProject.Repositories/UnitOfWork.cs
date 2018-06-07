@@ -26,7 +26,7 @@ namespace FinalProject.Repositories
         {
             get
             {
-                if (WeaponRepository == null)
+                if (weaponRepository == null)
                 {
                     return new WeaponRepository();
                 }
@@ -38,11 +38,11 @@ namespace FinalProject.Repositories
         {
             get
             {
-                if (ManafacturerRepository == null)
+                if (manafacturerRepository == null)
                 {
                     return new ManafacturerRepository();
                 }
-                return ManafacturerRepository;
+                return manafacturerRepository;
             }
         }
 
@@ -50,11 +50,11 @@ namespace FinalProject.Repositories
         {
             get
             {
-                if (UserRepository == null)
+                if (userRepository == null)
                 {
                     return new UserRepository();
                 }
-                return UserRepository;
+                return userRepository;
             }
         }
 
@@ -62,11 +62,11 @@ namespace FinalProject.Repositories
         {
             get
             {
-                if (ShopRepository == null)
+                if (shopRepository == null)
                 {
                     return new ShopRepository();
                 }
-                return ShopRepository;
+                return shopRepository;
             }
         }
 
@@ -74,11 +74,11 @@ namespace FinalProject.Repositories
         {
             get
             {
-                if (CategoryRepository == null)
+                if (categoryRepository == null)
                 {
                     return new CategoryRepository();
                 }
-                return CategoryRepository;
+                return categoryRepository;
             }
         }
 

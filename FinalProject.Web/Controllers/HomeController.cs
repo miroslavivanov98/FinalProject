@@ -9,19 +9,23 @@ using System.Web.Mvc;
 
 namespace FinalProject.Web.Controllers
 {
+    
     public class HomeController : Controller
     {
+        private readonly UnitOfWork uow;
+        public HomeController()
+        {
+            uow = new UnitOfWork(new DataAccess.FinalProjectDbContext());
+        }
         public ActionResult Index()
         {
-            //WeaponRepository weapons = new WeaponRepository();
-            //Weapon AtaArms = new Weapon() { Id = 0, ManafacturerId = 3, Name = "Ms1020", Caliber = "12", Weight = "2.1kg", BarrelLength = "90См", Price = "1245лв" };
-            //weapons.Save(AtaArms);
-            //return View();
-            WeaponRepository repo = new WeaponRepository();
-
-            WeaponListViewModel model = new WeaponListViewModel() { Weapon = repo.GetAll() };
-            return View(model);
            
+            Weapon Rifle = new Weapon() { Id = 0, ManafacturerId = 1, Model = "Rifle", Caliber = "12", Weight = "2.1kg", BarrelLength = "90См", Price = "1245" };
+            //uow.WeaponRepository.Save(Rifle);          
+
+            WeaponListViewModel model = new WeaponListViewModel() { Weapon = uow.WeaponRepository.GetAll() };
+            return View(model);
+               
         }
 
         public ActionResult About()

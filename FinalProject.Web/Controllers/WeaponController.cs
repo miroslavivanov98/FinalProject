@@ -22,19 +22,19 @@ namespace FinalProject.Web.Controllers
         {
             return RedirectToAction("View");
         }
-        public ActionResult View(int id)
+        public ActionResult View(int id = 0)
         {
             try
             {
-                WeaponViewModel model = new WeaponViewModel(new WeaponRepository().GetByID(id));
+                WeaponViewModel model = new WeaponViewModel(uow.WeaponRepository.GetByID(id));
                 if (model.Weapon == null)
                 {
                     //product not found
-                    return RedirectToAction("Error404", "Error");
+                    return RedirectToAction("Index", "Home");
                 }
                 return View(model);
             }
-            catch (Exception e) { return RedirectToAction("Error404", "Error"); }
+            catch (Exception e) { return RedirectToAction("Index", "Home"); }
         }
 
         public ActionResult List(int page = 0)
@@ -42,6 +42,15 @@ namespace FinalProject.Web.Controllers
             WeaponListViewModel model = new WeaponListViewModel() { Weapon = uow.WeaponRepository.GetAll() };
 
             return View(model);
+        }
+
+         public ActionResult OrderForm()
+        {
+            return View();
+        }
+        public ActionResult ConfirmOrder()
+        {
+            return View();
         }
     }
 }
